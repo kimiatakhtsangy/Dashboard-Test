@@ -1,14 +1,18 @@
-
+import Sidebar from "./Components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
-      
-        <p>
-         Material Dashboard 2
-        </p>
-       
+    <div>
+      <Sidebar/>
     </div>
+    
+    // <div className="App">
+      
+    //     <p>
+    //      Material Dashboard 2
+    //     </p>
+       
+    // </div>
   );
 }
 

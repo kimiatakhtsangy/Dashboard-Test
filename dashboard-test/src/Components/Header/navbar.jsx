@@ -1,5 +1,6 @@
-import HomeIcon from "@mui/material"
-function navbar() {
+import HomeIcon from '@mui/icons-material/Home';
+
+function Navbar() {
     return(
         <div>
             <HomeIcon color="disabled" />
@@ -11,4 +12,4 @@ function navbar() {
 
     );
 }
-export default navbar;
+export default Navbar;
