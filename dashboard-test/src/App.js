@@ -1,19 +1,20 @@
-import Sidebar from "./Components/Sidebar";
+
+import React from "react";
+import LeftNavDrower from"./Components/LeftNavDrower.jsx";
+import TopToolbar from "./Components/Header/TopToolbar.jsx";
+import { Grid } from "@mui/material";
+import Dashboard  from "./Components/Dashboard";
 
 function App() {
   return (
-    <div>
-      <Sidebar/>
-    </div>
+    <>
+      <TopToolbar />
+      <LeftNavDrower />
+      <Grid>
+        <Dashboard/>
+      </Grid>
     
-    // <div className="App">
-      
-    //     <p>
-    //      Material Dashboard 2
-    //     </p>
-       
-    // </div>
+    </>
   );
 }
-
 export default App;
