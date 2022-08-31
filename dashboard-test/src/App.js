@@ -1,6 +1,6 @@
-// import Sidebar from "./Components/Sidebar";
+
 import React from "react";
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import Sidebar from "./Components/Sidebar";
 
 function App() {
   return (
@@ -8,11 +8,11 @@ function App() {
     //   <Sidebar/>
     // </div>
     
-    <div className="App">
-      <DashboardIcon>Dashboard </DashboardIcon>
-        <p>
-         Material Dashboard 2
-        </p>
+    <div>
+        
+        <Sidebar/>
+         
+       
        
     </div>
   );
