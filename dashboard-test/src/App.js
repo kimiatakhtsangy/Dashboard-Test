@@ -1,21 +1,17 @@
 
 import React from "react";
-import Sidebar from "./Components/Sidebar";
+import LeftNavDrower from"./Components/LeftNavDrower.jsx";
+import TopToolbar from "./Components/Header/TopToolbar.jsx";
+import { Stack } from "@mui/material";
 
 function App() {
   return (
-    // <div>
-    //   <Sidebar/>
-    // </div>
-    
-    <div>
-        
-        <Sidebar/>
-         
-       
-       
-    </div>
+    <>
+      <TopToolbar />
+      <Stack justifyContent="space-between" direction="row" spacing={2}>
+        <LeftNavDrower />
+      </Stack>
+    </>
   );
 }
-
 export default App;

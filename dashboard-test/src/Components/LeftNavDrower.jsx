@@ -1,3 +1,4 @@
+import React from "react";
 import { AccountCircle, Dashboard, Home, Login, Logout, MultipleStop, Notifications, Receipt, TableView } from "@mui/icons-material";
 import { List } from "@mui/material";
 import { ListItemButton } from "@mui/material";
@@ -8,7 +9,7 @@ import { ListItem } from "@mui/material";
 import { Box } from "@mui/material";
 import react, { Profiler } from "react";
 
-const Sidebar = () => {
+const LeftNavDrower = () => {
   return (
     <Box
       bgcolor="grey"
@@ -91,5 +92,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
-
+export default LeftNavDrower;
