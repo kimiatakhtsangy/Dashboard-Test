@@ -1,5 +1,5 @@
 # Dashboard-Test
-This is a task for nadin soft COM! A biolingual dashboard by material ui.
+This is a task for nadin soft Company! A biolingual dashboard by material ui.
 
 For starting this App using npm commands :
 $ npm install
