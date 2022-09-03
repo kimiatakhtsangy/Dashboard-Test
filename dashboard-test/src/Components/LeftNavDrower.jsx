@@ -16,8 +16,10 @@ import { ListItemText } from "@mui/material";
 import { ListItemIcon } from "@mui/material";
 import { ListItem } from "@mui/material";
 import { Box } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const LeftNavDrower = () => {
+  const { t, i18n } = useTranslation();
   return (
     <Box
       color="white"
@@ -45,7 +47,7 @@ const LeftNavDrower = () => {
           borderRadius: "0.75rem",
         }}
       >
-        Material Dashboard 2
+        {t("Material Dashboard 2")}
       </Typography>
       <Divider
         sx={{
@@ -96,7 +98,7 @@ const LeftNavDrower = () => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary="Dashboard" sx={{fontWeight  : "100"}} />
+              <ListItemText primary={t("Dashboard")} sx={{fontWeight  : "100"}} />
             </ListItemButton>
           </ListItem>
 
@@ -120,7 +122,7 @@ const LeftNavDrower = () => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary="Table"    sx={{fontWeight : "lighter"}} />
+              <ListItemText primary={t("Table")}    sx={{fontWeight : "lighter"}} />
             </ListItemButton>
           </ListItem>
 
@@ -143,11 +145,12 @@ const LeftNavDrower = () => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary="Billing" />
+              <ListItemText primary={t("Billing")} />
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton
+            
               href="#RTL"
               sx={{
                 borderRadius: "0.8em",
@@ -165,7 +168,7 @@ const LeftNavDrower = () => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary="RTL" />
+              <ListItemText primary={t("RTL")} />
             </ListItemButton>
           </ListItem>
           <ListItem>
@@ -187,7 +190,7 @@ const LeftNavDrower = () => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary="Notifications" />
+              <ListItemText primary= {t("Notifications")} />
             </ListItemButton>
           </ListItem>
           <ListItem>
@@ -209,7 +212,7 @@ const LeftNavDrower = () => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary="Profile" />
+              <ListItemText primary={t("Profile")} />
             </ListItemButton>
           </ListItem>
           <ListItem>
@@ -231,7 +234,7 @@ const LeftNavDrower = () => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary="SignIn" />
+              <ListItemText primary={t("SignIn")} />
             </ListItemButton>
           </ListItem>
           <ListItem>
@@ -253,7 +256,7 @@ const LeftNavDrower = () => {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary="SignOut" />
+              <ListItemText primary= {t("SignOut")} />
             </ListItemButton>
           </ListItem>
         </List>

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Button, Paper, TextField, Typography } from "@mui/material";
+import { Button, Card, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-// import "./weather.css";
+import "./WeatherCardstyle.css";
 import axios from "axios";
+import { ElectricBolt } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 
-const WeatherCard = () => {
+const Weather = () => {
+    const { t, i18n } = useTranslation();
   const [value, setValue] = useState("");
   const [temp, setTemp] = useState("");
   const [typecity, setTypecity] = useState("");
-  const [city, setCity] = useState("Delhi");
+  const [city, setCity] = useState("Tehran");
   const [img, setImg] = useState("");
   const [disc, setDisc] = useState("");
 
@@ -31,34 +34,33 @@ const WeatherCard = () => {
   });
 
   return (
-    <Paper
+    <Card
       sx={{
         width: "300px",
-        height: "300px",
-        margin : "auto",
+        height: "350px",
+        margin: "auto",
+        padding: "auto",
         marginTop: "100px",
-        paddingTop: "30px",
+        paddingTop: "10px",
         textAlign: "center",
-        backgroundImage: "linear-gradient(#56CCF2, #2F80ED)",
+        borderRadius: "0.75rem",
         color: "black",
-        textShadow: "2px 2px 8px black",
-        boxShadow: "2px 2px 12px 2px white",
+boxShadow : "5",
+        backgroundColor: "white",
       }}
     >
-      <p className="title">Weather API</p>
+      <p className="title">{t("Weather API")}</p>
       <form className="form" onSubmit={citySelect}>
         <TextField
-        sx={{height :"2rem" }}
           placeholder="which city ?"
           value={typecity}
           onChange={(e) => setTypecity(e.target.value)}
         />
-
-        <Button variant="contained" disableElevation type="submit">
-          Check Weather
-        </Button>
+<Button type="submit" >
+<ElectricBolt  />
+      </Button>
       </form>
-      <Typography varient="h6" sx={{ textAlign: "center" }}>
+      <Typography varient="h6" sx={{ textAlign: "center"  , my:2}}>
         {value.name}
       </Typography>
       <img src={img} alt="icon" className="img" />
@@ -77,24 +79,22 @@ const WeatherCard = () => {
         sx={{
           display: "flex",
           justifyContent: "space-around",
-          marginBottom : "-20px"
-
+          marginBottom: "-20px",
         }}
       >
         <p>
-          
-          Min <br /> {`${Math.floor(temp.temp_min - 273.15)}°C`}
+          {t("Min")} <br /> {`${Math.floor(temp.temp_min - 273.15)}°C`}
         </p>
         <Typography varient="h5">{`${Math.floor(
           temp.temp_min - 273.15
         )}°C`}</Typography>
         <p>
-          Max <br />
+          {t("Max")} <br />
           {`${Math.floor(temp.temp_max - 273.15)} °C`}
         </p>
       </Box>
-    </Paper>
+    </Card>
   );
 };
 
-export default WeatherCard;
+export default Weather;
