@@ -6,6 +6,7 @@ this dashboard can been shown in persian and english which translated in pages.
 index.js is the root page which show App.js.
 you can see the main components in app.js and dashboard.js.
 
+
 For starting this App using npm commands :
 $ npm install
 $ npm run dev
