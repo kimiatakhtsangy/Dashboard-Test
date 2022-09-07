@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created by [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -9,10 +9,6 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 
@@ -80,7 +76,7 @@ you can see the main components in app.js and dashboard.js.
 
 For starting this App using npm commands :
 $ npm install
-$ npm run dev
+$ npm start
 
 Also this app using packages which need to be installed:
 
